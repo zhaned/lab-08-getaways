@@ -21,3 +21,19 @@ export const getPlaces = async () => {
     throw new Error(await response.json());
   }
 };
+
+export const getPlaceById = async (id) => {
+  const response = await fetch(`${process.env.BASE_URL}/places/${id}`);
+  if(response.ok) {
+    const results = await response.json();
+    return {
+        ...results,
+        pricePerNight: results.price_per_night,
+        imageThumbnail: results.image_thumbnail,
+        maxGuests: results.max_guests,
+        petFriendly: results.pet_friendly,
+      }
+  } else {
+    throw new Error(await response.json());
+  }
+}
