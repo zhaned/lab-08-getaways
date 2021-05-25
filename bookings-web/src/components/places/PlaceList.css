@@ -1,0 +1,15 @@
+img {
+   width: 200px
+}
+
+ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.description {
+   display: grid;
+   text-align: center;
+   margin: auto;
+}

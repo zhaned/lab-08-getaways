@@ -15,12 +15,12 @@ const Place = ({
 }) => {
   return (
     <ul>
+      <img src={image} alt={name}/>
+      <img src={imageThumbnail} alt={name}/>
       <li>{name}</li>
-      <li>{description}</li>
+      <li className='description'>{description}</li>
       <li>{location}</li>
       <li>{pricePerNight}</li>
-      <li>{image}</li>
-      <li>{imageThumbnail}</li>
       <li>{maxGuests}</li>
       <li>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</li>
       {pool ? <li>Has a Pool!</li> : null}
